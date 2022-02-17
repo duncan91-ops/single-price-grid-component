@@ -1,0 +1,150 @@
+:root {
+  --primaryCyan: hsl(179, 62%, 43%);
+  --primaryYellow: hsl(71, 73%, 54%);
+  --primaryGray: hsl(204, 43%, 93%);
+  --primaryBlue: hsl(218, 22%, 67%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primaryGray);
+  font-weight: 400;
+}
+
+.plan {
+  width: 33rem;
+  display: grid;
+  grid-template-rows: min-content 1fr 1fr;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.header,
+.pricing,
+.footer {
+  padding: 30px 20px;
+}
+
+.heading-primary {
+  font-size: 2.2rem;
+  padding-bottom: 20px;
+  color: #fff;
+}
+
+.title {
+  color: var(--primaryCyan);
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: var(--primaryYellow);
+  padding-bottom: 20px;
+}
+
+.header__text {
+  line-height: 1.5;
+  color: var(--primaryBlue);
+  padding-bottom: 10px;
+}
+
+.pricing,
+.footer {
+  background-color: var(--primaryCyan);
+}
+
+.price {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.price span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.6rem;
+  font-weight: 400;
+  opacity: 0.5;
+  color: var(--primaryGray);
+}
+
+.statement {
+  color: var(--primaryGray);
+  font-size: 1.7rem;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background-color: var(--primaryYellow);
+  padding: 16px 0;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-top: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.footer {
+  border-radius: 0 0 5px 5px;
+  opacity: 0.7;
+}
+
+.reasons {
+  list-style-type: none;
+}
+
+.reasons li {
+  color: var(--primaryGray);
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1200px) {
+  .plan {
+    width: 70rem;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header {
+    grid-column-end: span 2;
+  }
+
+  .pricing,
+  .footer,
+  .header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .pricing {
+    border-bottom-left-radius: 5px;
+  }
+
+  .footer {
+    border-bottom-left-radius: 0;
+  }
+}
